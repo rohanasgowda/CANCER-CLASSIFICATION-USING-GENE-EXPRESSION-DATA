@@ -1,16 +1,16 @@
 # Cancer Classification Using Gene Expression Data
 
 ## 📌 Overview
-This project implements a **binary cancer classification system** using real **gene expression data** from NCBI. The goal is to classify samples as **cancerous** or **non-cancerous**. The project explores **machine learning**, **feature selection**, and **hybrid optimization techniques** to improve accuracy.
+This project implements a **binary cancer classification system** using gene expression data from NCBI (GSE9476). The goal is to classify samples as **cancerous (AML)** or **control**, using machine learning with **feature selection** and **hybrid optimization** to improve accuracy.
 
 ---
 
 ## 🧩 Tools & Libraries
 - MATLAB  
-- Machine Learning Algorithms:
-  - SVM (Support Vector Machine)  
-  - Random Forest  
-- Feature Selection:
+- Machine Learning Models:
+  - Support Vector Machine (SVM)  
+  - Random Forest (RF)  
+- Feature Selection Techniques:
   - mRMR (Minimum Redundancy Maximum Relevance)  
   - Spider Monkey Optimization (SMO)  
 
@@ -18,25 +18,23 @@ This project implements a **binary cancer classification system** using real **g
 
 ## ⚙️ Workflow
 
-1. **Data Collection**  
-   - Real gene expression datasets downloaded from **NCBI**.
-
-2. **Preprocessing**  
-   - Cleaned and normalized gene expression data for modeling.
-
-3. **Classification Methods**  
-   - **SVM:** Initial model achieved ~78.95% accuracy.  
-   - **mRMR Feature Selection:** Selected top 200 genes, improving accuracy to 84.21%.  
-   - **Hybrid Random Forest + Spider Monkey Optimization:** Selected 87 genes, achieving **94.74% accuracy**.
-
-4. **Evaluation**  
-   - Accuracy, confusion matrix, and performance metrics calculated in MATLAB.
+1. **Data Loading:** GEO dataset (GSE9476) is loaded and cleaned.  
+2. **Hold-Out Split:** 70% training / 30% test.  
+3. **Model 1 – SVM:** Using all genes (~12,625).  
+4. **Model 2 – SVM + mRMR:** Select top 200 genes using mRMR.  
+5. **Model 3 – RF + SMO Hybrid:** Random Forest ranks top 200 genes; SMO selects optimal subset (~87 genes).  
+6. **Evaluation:** Accuracy, confusion matrices, and visualizations.  
+7. **Visualizations:**  
+   - Accuracy comparison bar chart  
+   - Feature-selection funnel plot  
+   - PCA scatterplot of SMO-selected genes  
+   - Confusion matrices
 
 ---
 
-## ✅ Applications
-- Early cancer detection and diagnosis  
-- Bioinformatics research  
-- Feature selection in high-dimensional datasets  
+## ✅ Results
+- **SVM (All Genes):** ~78.95% accuracy  
+- **SVM + mRMR (Top 200):** ~84.21% accuracy  
+- **RF + SMO Hybrid:** ~94.74% accuracy with 87 genes selected  
 
 ---
