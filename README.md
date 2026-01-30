@@ -42,7 +42,7 @@ This project implements a **binary cancer classification system** using gene exp
 5.  **Model 3 – RF + SMO Hybrid:** Random Forest ranks top 200 genes; SMO selects optimal subset (~87 genes).
 6.  **Evaluation:** Accuracy, confusion matrices, and visualizations.
 
-![PCA of SMO-Selected Genes](./PCA%20of%20SMO-Selected%20Genes.png)
+![PCA Analysis](./PCA%20of%20SMO-Selected%20Genes.png)
 
 ## ✅ Results
 * **SVM (All Genes):** ~78.95% accuracy
